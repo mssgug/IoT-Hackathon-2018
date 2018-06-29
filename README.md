@@ -6,7 +6,7 @@ Repository for code related to IoT Hackathon Singapore on 30 June 2018. Repo is 
 
 `git clone https://github.com/mssgug/IoT-Hackathon-2018.git`
 
-## Create branch for with your team name eg. team1
+## Create branch for with team name eg. `team1`
 
 `git branch team1`
 
