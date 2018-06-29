@@ -18,22 +18,22 @@ Repository for code related to IoT Hackathon Singapore on 30 June 2018
 
 ## Check in code
 
-Check status for branch
+- 1 Check status for branch
 
 `git status`
 
-Add all changes to commit
+- 2 Add all changes to commit
 
 `git add -A`
 
-Add individual file to commit
+- 2 Add individual file to commit
 
 `git add 'filename'`
 
-Add commit message
+- 3 Add commit message
 
 `git commit -m 'put some meaningful commit message here'`
 
-### Push changes to the remote repository
+- 4 Push changes to the remote repository
 
 `git push -u origin team1`
