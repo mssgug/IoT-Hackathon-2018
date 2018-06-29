@@ -1,8 +1,8 @@
 # IoT-Hackathon-2018
 
-Repository for code related to IoT Hackathon Singapore on 30 June 2018
+Repository for code related to IoT Hackathon Singapore on 30 June 2018. Repo is hosted at `https://github.com/mssgug/IoT-Hackathon-2018`
 
-## Clone the repository
+## Clone the repository using terminal
 
 `git clone https://github.com/mssgug/IoT-Hackathon-2018.git`
 
@@ -18,22 +18,26 @@ Repository for code related to IoT Hackathon Singapore on 30 June 2018
 
 ## Check in code
 
-- 1 Check status for branch
+- Check status for branch
 
 `git status`
 
-- 2 Add all changes to commit
+- Add all changes to commit
 
 `git add -A`
 
-- 2 Add individual file to commit
+- Add individual file to commit
 
 `git add 'filename'`
 
-- 3 Add commit message
+- Add commit message
 
 `git commit -m 'put some meaningful commit message here'`
 
-- 4 Push changes to the remote repository
+- Push changes to the remote repository
 
 `git push -u origin team1`
+
+## Alternate options
+
+Feel free to use tools of your choice like [GitHub Desktop](https://desktop.github.com), [Gitbash](https://gitforwindows.org) etc.
