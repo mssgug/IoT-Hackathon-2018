@@ -1,4 +1,3 @@
-Apple
-Banana
-Lemon
-Orange
+Jan
+Paul
+Richard

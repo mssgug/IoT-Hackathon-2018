@@ -19,14 +19,14 @@ class DisplayManager(object):
         N = Colors.Nothing.value
         Y = Colors.Yellow.value
         logo = [
-        N, N, N, N, Y, Y, N, N,
         N, N, N, Y, Y, N, N, N,
-        N, N, G, G, G, G, N, N,
-        N, G, G, G, G, G, G, N,
-        N, G, G, G, G, G, G, N,
-        N, G, G, G, G, G, G, N,
-        N, G, G, G, G, G, G, N,
-        N, N, G, G, G, G, N, N,
+        N, N, N, Y, Y, N, N, N,
+        N, N, N, Y, Y, N, N, N,
+        N, N, N, Y, Y, N, N, N,
+        N, N, N, Y, Y, N, N, N,
+        N, N, N, Y, Y, N, N, N,
+        N, N, N, Y, Y, N, N, N,
+        N, N, N, Y, Y, N, N, N,
         ]
         return logo
 
@@ -35,29 +35,30 @@ class DisplayManager(object):
         N = Colors.Nothing.value
         R = Colors.Red.value
         logo = [
-        N, G, G, N, N, G, G, N, 
-        N, N, G, G, G, G, N, N,
-        N, N, R, R, R, R, N, N, 
-        N, R, R, R, R, R, R, N,
-        R, R, R, R, R, R, R, R,
-        R, R, R, R, R, R, R, R,
-        N, R, R, R, R, R, R, N,
-        N, N, R, R, R, R, N, N,
+        N, G, G, N, N, G, G, N,
+        N, G, G, N, N, G, G, N,
+        N, G, G, N, N, G, G, N,
+        N, G, G, N, N, G, G, N,
+        N, G, G, N, N, G, G, N,
+        N, G, G, N, N, G, G, N,
+        N, G, G, N, N, G, G, N,
+        N, G, G, N, N, G, G, N,
         ]
         return logo
 
     def __banana(self):
         N = Colors.Nothing.value
         Y = Colors.Yellow.value
+        R = Colors.Red.value
         logo = [
-        N, N, Y, Y, N, N, N, N,
-        N, Y, Y, Y, N, N, N, N,
-        Y, Y, Y, N, N, N, N, N,
-        Y, Y, Y, N, N, N, N, N,
-        N, Y, Y, Y, N, N, N, N,
-        N, N, Y, Y, Y, N, N, N,
-        N, N, N, Y, Y, Y, Y, N, 
-        N, N, N, N, N, Y, Y, Y,
+        R, R, N, R, R, N, R, R,
+        R, R, N, R, R, N, R, R,
+        R, R, N, R, R, N, R, R,
+        R, R, N, R, R, N, R, R,
+        R, R, N, R, R, N, R, R,
+        R, R, N, R, R, N, R, R,
+        R, R, N, R, R, N, R, R,
+        R, R, N, R, R, N, R, R,
         ]
         return logo
 
@@ -65,14 +66,14 @@ class DisplayManager(object):
         N = Colors.Nothing.value
         O = Colors.Orange.value
         logo = [
-        N, N, N, O, O, N, N, N, 
-        N, O, O, O, O, O, O, N, 
-        N, O, O, O, O, O, O, N, 
-        O, O, O, O, O, O, O, O, 
-        O, O, O, O, O, O, O, O, 
-        N, O, O, O, O, O, O, N, 
-        N, O, O, O, O, O, O, N, 
-        N, N, N, O, O, N, N, N,  
+        N, N, N, O, O, N, N, N,
+        N, O, O, O, O, O, O, N,
+        N, O, O, O, O, O, O, N,
+        O, O, O, O, O, O, O, O,
+        O, O, O, O, O, O, O, O,
+        N, O, O, O, O, O, O, N,
+        N, O, O, O, O, O, O, N,
+        N, N, N, O, O, N, N, N,
         ]
         return logo
 
@@ -87,7 +88,7 @@ class DisplayManager(object):
         Y, Y, Y, Y, Y, Y, Y, Y,
         N, Y, Y, Y, Y, Y, Y, N,
         N, N, Y, Y, Y, Y, N, N,
-        N, N, N, Y, Y, N, N, N,  
+        N, N, N, Y, Y, N, N, N,
         ]
         return logo
 
@@ -118,11 +119,11 @@ class DisplayManager(object):
 
     def displayImage(self, strImage):
         print("Displaying " + strImage)
-        if 'apple' in strImage.lower():
+        if 'CompA' in strImage.lower():
             self.__displayImage(self.__apple())
-        elif 'rasp' in strImage.lower():
+        elif 'CompB' in strImage.lower():
             self.__displayImage(self.__raspberry())
-        elif 'banana' in strImage.lower():
+        elif 'CompC' in strImage.lower():
             self.__displayImage(self.__banana())
         elif 'orange' in strImage.lower():
             self.__displayImage(self.__orange())
@@ -133,4 +134,3 @@ class DisplayManager(object):
         else:
             self.__displayImage(self.__unknown())
             self.s.clear()
-

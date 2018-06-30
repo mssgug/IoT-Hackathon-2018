@@ -25,7 +25,15 @@ def receive_message_callback(message, HubManager):
     message_buffer = message.get_bytearray()
     body=message_buffer[:len(message_buffer)].decode('utf-8')
     allTagsAndProbability = json.loads(body)
-    DISPLAY_MANAGER.displayImage(MESSAGE_PARSER.highestProbabilityTagMeetingThreshold(allTagsAndProbability, THRESHOLD))
+
+    # company name from label
+    employee2company = {
+    "Jan" : "CompA",
+    "Richard" : "CompB",
+    "Paul" : "CompC",
+    }
+    
+    DISPLAY_MANAGER.displayImage(employee2company[MESSAGE_PARSER.highestProbabilityTagMeetingThreshold(allTagsAndProbability, THRESHOLD)])
     return IoTHubMessageDispositionResult.ACCEPTED
 
 class HubManager(object):
@@ -37,17 +45,17 @@ class HubManager(object):
         self.client.set_option("messageTimeout", 10000)
         #self.client.set_retry_policy(IoTHubClientRetryPolicy.RETRY_INTERVAL, 50)
         self.set_certificates()
-        # sets the callback when a message arrives on "input1" queue.  Messages sent to 
+        # sets the callback when a message arrives on "input1" queue.  Messages sent to
         # other inputs or to the default will be silently discarded.
         self.client.set_message_callback("input1", receive_message_callback, self)
         print ( "Module is now waiting for messages in the input1 queue.")
 
-        
+
 
     def set_certificates(self):
         isWindows = sys.platform.lower() in ['windows', 'win32']
         if not isWindows:
-            CERT_FILE = os.environ['EdgeModuleCACertificateFile']        
+            CERT_FILE = os.environ['EdgeModuleCACertificateFile']
             print("Adding TrustedCerts from: {0}".format(CERT_FILE))
             # this brings in x509 privateKey and certificate
             file = open(CERT_FILE)
@@ -57,7 +65,6 @@ class HubManager(object):
             except IoTHubClientError as iothub_client_error:
                 print ( "set_option TrustedCerts failed (%s)" % iothub_client_error )
             file.close()
-
 
 def main(connection_string):
     try:
